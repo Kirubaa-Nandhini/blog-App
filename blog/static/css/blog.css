@@ -1,0 +1,78 @@
+/* General reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Main layout */
+#content {
+    width: 70%;
+    float: left;
+    padding: 30px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    width: 30%;
+    float: right;
+    padding: 30px;
+    background: #2c3e50;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Sidebar */
+#sidebar h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+#sidebar p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Blog titles */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+/* Links */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Post meta info */
+.date {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Post body */
+p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Clear floats */
+body::after {
+    content: "";
+    display: block;
+    clear: both;
+}

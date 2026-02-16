@@ -3,6 +3,7 @@ from ..models import Post
 from django.db.models import Count
 from django.utils.safestring import mark_safe
 import markdown
+from django.utils import timezone
 register = template.Library()
 @register.simple_tag
 def total_posts():
@@ -21,3 +22,14 @@ def get_most_commented_posts(count=5):
 @register.filter(name='markdown')
 def markdown_format(text):
     return mark_safe(markdown.markdown(text))
+@register.filter(name='wordcount')
+def wordcount(text):
+    if not text:
+        return 0
+    return len(text.split())
+@register.filter(name='is_new')
+def is_new(publish):
+    days=(timezone.now()-publish).days
+    if(days<3):
+        return "new"
+    return "old"

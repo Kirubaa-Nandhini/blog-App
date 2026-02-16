@@ -11,6 +11,7 @@ Django==5.2.11
 django-memcache-status==2.2
 django-taggit==6.1.0
 djangorestframework==3.16.1
+gunicorn==25.1.0
 hyperlink==21.0.0
 idna==3.11
 Incremental==24.11.0
@@ -32,4 +33,5 @@ Twisted==25.5.0
 txaio==25.9.2
 typing_extensions==4.15.0
 uWSGI==2.0.31
+whitenoise==6.11.0
 zope.interface==8.2
